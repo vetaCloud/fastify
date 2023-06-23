@@ -21,7 +21,7 @@ const index = {
       });
     }
   },
-  async uploadImage(
+  async uploadMedia(
     request: FastifyRequest<{
       Params: {
         height: number,
@@ -32,7 +32,7 @@ const index = {
     reply: FastifyReply
   ) {
     try {
-        const uploadFile = await service.uploadImage(request)
+        const uploadFile = await service.uploadMedia(request)
         return reply.code(201).send({
             status: 201,
             success: true,
