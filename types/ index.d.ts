@@ -1,7 +1,6 @@
-import { FastifyRequest } from 'fastify';
-
-declare global {
-    interface FastifyRequest {
-        files? : Record<string,any>
+import fastify from "fastify";
+declare module 'fastify' {
+    export interface FastifyRequest {
+        file: any
     }
 }
