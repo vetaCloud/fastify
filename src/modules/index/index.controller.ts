@@ -7,12 +7,11 @@ const index = {
     reply: FastifyReply
   ) {
     try {
-        console.log(request.files)
         const uploadFile = await service.uploadFile(request)
         return reply.code(201).send({
             status: 201,
             success: true,
-            message: uploadFile,
+            message: uploadFile.data.file,
         });
     } catch (e) {
       return reply.code(500).send({

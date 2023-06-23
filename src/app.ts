@@ -19,6 +19,8 @@ server.get('/healthcheck', async function () {
   return { status: 'Ok' };
 });
 
+server.register(require('@fastify/multipart'))
+
 server.register(
   helmet, ({
     contentSecurityPolicy: false,
