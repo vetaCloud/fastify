@@ -46,6 +46,26 @@ const service = {
             }
         })
         return response
+    },
+    async deleteFile(
+        request: FastifyRequest<{
+            Headers: {
+                X_FILE_NAME: string
+            }
+        }>,
+    ){  
+        const response = await axios({
+            maxContentLength: Infinity, maxBodyLength: Infinity, 
+            headers: {
+                "Content-Type": "application/json",
+                'X_API_KEY': process.env.VETACLOUD_PRIVATE_KEY, 
+                'X_ROUTE_NAME': process.env.VETACLOUD_INDEX_ROUTE, 
+                'X_FILE_NAME': request.headers.x_file_name
+            },
+            method: 'delete',
+            url: `${process.env.VETACLOUD_URL}/typescript/`
+        })
+        return response
     }
 }
 
