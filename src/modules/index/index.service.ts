@@ -66,6 +66,21 @@ const service = {
             url: `${process.env.VETACLOUD_URL}/typescript/`
         })
         return response
+    },
+    async getAllFilesInRoute(
+        request: FastifyRequest
+    ){  
+        const response = await axios({
+            maxContentLength: Infinity, maxBodyLength: Infinity, 
+            headers: {
+                "Content-Type": "application/json",
+                'X_API_KEY': process.env.VETACLOUD_PRIVATE_KEY, 
+                'X_ROUTE_NAME': process.env.VETACLOUD_INDEX_ROUTE
+            },
+            method: 'get',
+            url: `${process.env.VETACLOUD_URL}/typescript/files`
+        })
+        return response
     }
 }
 

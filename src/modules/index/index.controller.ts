@@ -71,6 +71,26 @@ const index = {
         message: "Something went wrong",
       });
     }
+  },
+  async getAllFiles(
+    request: FastifyRequest,
+    reply: FastifyReply
+  ) {
+    try {
+        const uploadFile = await service.getAllFilesInRoute(request)
+        return reply.code(201).send({
+            status: 201,
+            success: true,
+            message: uploadFile.data.message,
+        });
+    } catch (e) {
+      console.log(e)
+      return reply.code(500).send({
+        status: 500,
+        success: false,
+        message: "Something went wrong",
+      });
+    }
   }
 }
 
