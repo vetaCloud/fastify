@@ -286,9 +286,10 @@ QR Route is generated for all users but the code is generated for only Advanced 
   ]
 }
  ```
- <img width="1060" alt="Screen Shot 2023-04-22 at 6 46 21 PM" src="https://user-images.githubusercontent.com/63419117/234043083-e990941a-9cc7-43bb-ace9-41e42575ade7.png">
 
- 
+
+ <img width="1104" alt="Screen Shot 2023-06-23 at 1 42 29 PM" src="https://github.com/vetaCloud/typescript/assets/63419117/7150790d-b7b3-4fa9-b943-91fb4a648a2c">
+
  
  
  # Extra
