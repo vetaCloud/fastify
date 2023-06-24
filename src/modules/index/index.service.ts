@@ -11,7 +11,7 @@ const service = {
                 'X_API_KEY': process.env.VETACLOUD_PRIVATE_KEY, 'X_ROUTE_NAME': process.env.VETACLOUD_INDEX_ROUTE
             },
             method: 'POST',
-            url: `${process.env.VETACLOUD_URL}/typescript/`,
+            url: `${process.env.VETACLOUD_URL}/fastify/`,
             data: {
               filename: file.filename, raw: await file.toBuffer()
             }
@@ -39,7 +39,7 @@ const service = {
                 'X_API_KEY': process.env.VETACLOUD_PRIVATE_KEY, 'X_ROUTE_NAME': process.env.VETACLOUD_INDEX_ROUTE
             },
             method: 'POST',
-            url: `${process.env.VETACLOUD_URL}/typescript/image/${height}/${length}/${quality}`,
+            url: `${process.env.VETACLOUD_URL}/fastify/image/${height}/${length}/${quality}`,
             data: {
               filename: file.filename, raw: await file.toBuffer()
             }
@@ -62,7 +62,7 @@ const service = {
                 'X_FILE_NAME': request.headers.x_file_name
             },
             method: 'delete',
-            url: `${process.env.VETACLOUD_URL}/typescript/`
+            url: `${process.env.VETACLOUD_URL}/fastify/`
         })
         return response
     },
@@ -77,7 +77,7 @@ const service = {
                 'X_ROUTE_NAME': process.env.VETACLOUD_INDEX_ROUTE
             },
             method: 'get',
-            url: `${process.env.VETACLOUD_URL}/typescript/files`
+            url: `${process.env.VETACLOUD_URL}/fastify/files`
         })
         return response
     }

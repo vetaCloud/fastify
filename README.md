@@ -51,7 +51,7 @@ Your Private key can be found on your [dashboard](https://dashboard.vetacloud.co
               'X_API_KEY': process.env.VETACLOUD_PRIVATE_KEY, 'X_ROUTE_NAME': process.env.VETACLOUD_INDEX_ROUTE
           },
           method: 'POST',
-          url: `${process.env.VETACLOUD_URL}/typescript/`,
+          url: `${process.env.VETACLOUD_URL}/fastify/`,
           data: {
             filename: file.filename, raw: await file.toBuffer()
           }
@@ -86,7 +86,7 @@ async uploadMedia(
                 'X_API_KEY': process.env.VETACLOUD_PRIVATE_KEY, 'X_ROUTE_NAME': process.env.VETACLOUD_INDEX_ROUTE
             },
             method: 'POST',
-            url: `${process.env.VETACLOUD_URL}/typescript/image/${height}/${length}/${quality}`,
+            url: `${process.env.VETACLOUD_URL}/fastify/image/${height}/${length}/${quality}`,
             data: {
               filename: file.filename, raw: await file.toBuffer()
             }
