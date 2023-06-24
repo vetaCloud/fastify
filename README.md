@@ -2,9 +2,9 @@
 <img src="https://dashboard.vetacloud.com/assets/vC-png-2.a21a37aa.png"></img>
 </p>
 
-# vetaCloud v0.1 Typescript Integration
+# vetaCloud v0.1 Fastify Integration
 
-How to use - Fastify framework as a use case
+How to use
 
 `yarn add @fastify/multipart`
 
